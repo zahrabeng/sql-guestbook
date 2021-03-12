@@ -6,7 +6,7 @@ import { Client } from "pg";
 //and default username and password,
 //we only need to specify the (non-default) database name.
 
-const client = new Client({ database: 'signatures' });
+const client = new Client({ database: 'guestbook' });
 
 //TODO: this request for a connection will not necessarily complete before the first HTTP request is made!
 client.connect();
