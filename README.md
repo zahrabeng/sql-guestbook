@@ -15,14 +15,24 @@ It is not currently working - you must fix it by adding code to read from and wr
 - Create a database called `guestbook`
 - In that new database, run the commands in [db/create_tables.sql](db/create_tables.sql), to create a table.
 
+## What's in a 'signature' ?
+- When the API user sends a signature it should contain two strings:
+  - name (a mandatory string, such as 'Grace Hopper')
+  - message (an optional string, such as 'Hello World')
+
+- When the API returns signatures from the database, the signatures will also contain: 
+  - id: an integer
+  - time: a timestamp describing when this signature was added to the guestbook.
+
 ## Tasks
 
 Find all the lines of code that have the comment `//FIXME-TASK`
 
 At each of these locations, write code to execute SQL commands to read from, insert, update, or delete table rows in the database, as appropriate.
 
+
 ## Testing
 
 Test your server manually with Postman.
 
-There is a Postman collection file in this repo, [here](./postman/guestbook.postman_collection.json). This can be imported into Postman to quickly give you some requests to use in testing.
+There is a Postman collection file in this repo, [here](./postman/guestbook.postman_collection.json). Optionally, this can be imported into Postman to quickly give you some requests to use in testing.  Or you can just create Postman requests as normal.
