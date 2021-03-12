@@ -8,7 +8,7 @@
 
 This is starting code for a guestbook API, inspired by a similar one in the [http conventions](https://github.com/WeAreAcademy/mark-nodejs-proj--http-conventions) project.
 
-It is not currently working, as it is incomplete - the database parts have been left to you.
+It is not currently working - you must fix it by adding code to read from and write to the database.
 
 ## Setup
 
