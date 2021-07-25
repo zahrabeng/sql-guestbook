@@ -13,6 +13,9 @@ It is not currently working - you must fix it by adding code to read from and wr
 ## Setup
 
 - Create a database called `guestbook`
+```
+sudo -u postgres createdb guestbook
+```
 - In that new database, run the commands in [db/create_tables.sql](db/create_tables.sql), to create a table.
 
 ## What's in a 'signature' ?
