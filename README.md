@@ -6,9 +6,9 @@
 
 # What's this?
 
-This is starting code for a guestbook API, inspired by a similar one in the [http conventions](https://github.com/WeAreAcademy/mark-nodejs-proj--http-conventions) project.
+This is starting code for a very simple guestbook API, inspired by a similar one in the [http conventions](https://github.com/WeAreAcademy/mark-nodejs-proj--http-conventions) project, but simpler.
 
-It is not currently working - you must fix it by adding code to read from and write to the database.
+It is not currently working - you must fix it by adding code to execute queries read from and write to the database, using the node-postgres ('pg') library.
 
 ## Setup
 
@@ -17,6 +17,9 @@ It is not currently working - you must fix it by adding code to read from and wr
 sudo -u postgres createdb guestbook
 ```
 - In that new database, run the commands in [db/create_tables.sql](db/create_tables.sql), to create a table.
+- Run `yarn` to install the project dependencies!
+- Run with `yarn start:dev`
+
 
 ## What's in a 'signature' ?
 - When the API user sends a signature it should contain two strings:
