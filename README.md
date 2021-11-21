@@ -15,6 +15,8 @@ It is not currently working - you must fix it by adding code to execute queries 
 - Create a database called `guestbook`
 ```
 sudo -u postgres createdb guestbook
+# or on mac
+createdb guestbook
 ```
 - In that new database, run the commands in [db/create_tables.sql](db/create_tables.sql), to create a table.
 - Run `yarn` to install the project dependencies!
