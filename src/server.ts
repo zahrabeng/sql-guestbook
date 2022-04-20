@@ -127,8 +127,9 @@ app.put("/signatures/:id", async (req, res) => {
 
 app.delete("/signatures/:id", async (req, res) => {
   const id = parseInt(req.params.id); // params are string type
-
-  const queryResult: any = null; ////FIXME-TASK: delete the row with given id from the db  
+  const text = "DELETE FROM signatures WHERE id = $1";
+  const values = [`${id}`]
+  const queryResult: any = await client.query(text, values); ////FIXME-TASK: delete the row with given id from the db  
   const didRemove = queryResult.rowCount === 1;
 
   if (didRemove) {
