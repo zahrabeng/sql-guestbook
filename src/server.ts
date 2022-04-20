@@ -26,7 +26,9 @@ app.use(express.json());
 
 //When this route is called, return the most recent 100 signatures in the db
 app.get("/signatures", async (req, res) => {
-  const signatures = null; //FIXME-TASK: get signatures from db!
+  const text = "SELECT * FROM signatures ORDER BY time DESC LIMIT 100";
+  const result = await client.query(text);
+  const signatures = result.rows; //FIXME-TASK: get signatures from db!
   res.status(200).json({
     status: "success",
     data: {
@@ -34,6 +36,7 @@ app.get("/signatures", async (req, res) => {
     },
   });
 });
+
 
 app.get("/signatures/:id", async (req, res) => {
   // :id indicates a "route parameter", available as req.params.id
