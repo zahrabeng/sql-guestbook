@@ -94,8 +94,9 @@ app.put("/signatures/:id", async (req, res) => {
   const { name, message } = req.body;
   const id = parseInt(req.params.id);
   if (typeof name === "string") {
-
-    const result: any = null; //FIXME-TASK: update the signature with given id in the DB.
+    const text = "UPDATE signatures SET signature = $1, message = $2 WHERE id = $3 RETURNING *"
+    const values = [`${name}`, `${message}`, `${id}`];
+    const result: any = await client.query(text, values); //FIXME-TASK: update the signature with given id in the DB.
 
     if (result.rowCount === 1) {
       const updatedSignature = result.rows[0];
